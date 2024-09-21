@@ -1,2 +1,15 @@
-{ "commands": []
+{ "commands": [
+{ "hdr": "7E2", "rax": "7EA", "cmd": {"22": "E004"}, "freq": 1,
+  "signals": [
+    {"id": "KONAEV_VPWR", "path": "Battery", "fmt": {"bix": 152, "len": 8, "max": 100, "unit": "percent" }, "name": "12V battery charge"}
+  ]},
+{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0101"}, "freq": 1,
+  "signals": [
+    {"id": "KONAEV_HVBAT_SOC", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 0.5, "unit": "percent" }, "name": "HV battery charge", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0105"}, "freq": 1,
+  "signals": [
+    {"id": "KONAEV_HVBAT_SOC_DISP", "path": "Battery", "fmt": {"bix": 248, "len": 8, "max": 100, "mul": 0.5, "unit": "percent" }, "name": "HV battery charge (displayed)", "suggestedMetric": "stateOfCharge"}
+  ]}
+]
 }
