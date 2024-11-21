@@ -13,7 +13,7 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "cmd": {"21": "01"}, "freq": 0.25,
   "signals": [
-    {"id": "KONAEV_VSS", "path": "Movement", "fmt": {"bix": 112, "len": 16, "max": 180, "div": 100, "unit": "milesPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
+    {"id": "KONAEV_VSS", "path": "Movement", "fmt": {"bix": 104, "len": 16, "blsb": true, "signed": true, "min": -180, "max": 180, "div": 100, "unit": "milesPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
   ]},
 { "hdr": "7E2", "rax": "7EA", "cmd": {"22": "E004"}, "freq": 1,
   "signals": [
