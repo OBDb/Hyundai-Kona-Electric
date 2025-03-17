@@ -7,33 +7,72 @@ from typing import Dict, Any
 # These will be imported from the schemas repository
 from schemas.python.can_frame import CANIDFormat
 from schemas.python.json_formatter import format_file
-from schemas.python.signals_testing import obd_testrunner
+from schemas.python.signals_testing import obd_testrunner_by_year
 
 REPO_ROOT = Path(__file__).parent.parent.absolute()
 
 TEST_CASES = [
-    # TODO: Implement real tests below with vehicle data.
-    # 2019 model year
     {
-        "model_year": "2019",
-        "signalset": "default.json",
+        "model_year": 2023,
         "tests": [
-            # # Tire pressures
-            # ("72E05622813028C", {"F150_TP_FL": 32.6}),
-            # ("72E056228140273", {"F150_TP_FR": 31.35}),
-            # ("72E056228150291", {"F150_TP_RRO": 32.85}),
-            # ("72E05622816026E", {"F150_TP_RLO": 31.1}),
-            # ("72E056228170000", {"F150_TP_RRI": 0.0}),
-            # ("72E056228180000", {"F150_TP_RLI": 0.0}),
+            # Battery state
+            ("""
+7EC103E620101FFF7E7
+7EC21FF820000000003
+7EC2200780EA8151515
+7EC23151515000015BF
+7EC240BBF4100008A00
+7EC2501A09F00019C65
+7EC26000097E6000093
+7EC276B011C17660D01
+7EC2876033803380BB8
+""", {
+    "KONAEV_HVBAT_SOC": 65,
+    "KONAEV_HVBAT_CHARGING": 0,
+    "KONAEV_HVBAT_PLUG_RAPD": 0,
+    "KONAEV_HVBAT_PLUG_NORM": 0,
+    "KONAEV_C_V_MAX": 3.82,
+    "KONAEV_C_V_MAX_ID": 11.0,
+    "KONAEV_C_V_MIN": 3.82,
+    "KONAEV_C_V_MIN_ID": 65,
+    "KONAEV_HVBAT_CHRG_TOT_C": 10665.5,
+    "KONAEV_HVBAT_DSCH_TOT_C": 10557.3,
+    "KONAEV_HVBAT_CHRG_TOT_E": 3888.6,
+    "KONAEV_HVBAT_DSCH_TOT_E": 3773.9,
+    "KONAEV_DRIVE_TIME": 18618214.0,
+    "KONAEV_INVRT_CV": 374.0,
+    "KONAEV_RPM": 824.0,
+    }),
+            ("""
+7EC103E620101FFF7E7
+7EC21FF760000000003
+7EC2202750E2B161515
+7EC23151516000016B9
+7EC240AB84100009200
+7EC2501A0C900019D07
+7EC26000097F5000093
+7EC27A6011C237B0D01
+7EC28680E990E990BB8
+""", {
+    "KONAEV_HVBAT_SOC": 59,
+    "KONAEV_HVBAT_CHARGING": 0,
+    "KONAEV_HVBAT_PLUG_RAPD": 0,
+    "KONAEV_HVBAT_PLUG_NORM": 0,
+    "KONAEV_C_V_MAX": 3.7,
+    "KONAEV_C_V_MAX_ID": 10.0,
+    "KONAEV_C_V_MIN": 3.68,
+    "KONAEV_C_V_MIN_ID": 65,
+    "KONAEV_HVBAT_CHRG_TOT_C": 10669.7,
+    "KONAEV_HVBAT_DSCH_TOT_C": 10573.5,
+    "KONAEV_HVBAT_CHRG_TOT_E": 3890.1,
+    "KONAEV_HVBAT_DSCH_TOT_E": 3779.8,
+    "KONAEV_DRIVE_TIME": 18621307.0,
+    "KONAEV_INVRT_CV": 360.0,
+    "KONAEV_RPM": 3737.0,
+    }),
         ]
     },
 ]
-
-def load_signalset(filename: str) -> str:
-    """Load a signalset JSON file from the standard location."""
-    signalset_path = REPO_ROOT / "signalsets" / "v3" / filename
-    with open(signalset_path) as f:
-        return f.read()
 
 @pytest.mark.parametrize(
     "test_group",
@@ -42,13 +81,11 @@ def load_signalset(filename: str) -> str:
 )
 def test_signals(test_group: Dict[str, Any]):
     """Test signal decoding against known responses."""
-    signalset_json = load_signalset(test_group["signalset"])
-
     # Run each test case in the group
     for response_hex, expected_values in test_group["tests"]:
         try:
-            obd_testrunner(
-                signalset_json,
+            obd_testrunner_by_year(
+                test_group['model_year'],
                 response_hex,
                 expected_values,
                 can_id_format=CANIDFormat.ELEVEN_BIT
@@ -56,8 +93,7 @@ def test_signals(test_group: Dict[str, Any]):
         except Exception as e:
             pytest.fail(
                 f"Failed on response {response_hex} "
-                f"(Model Year: {test_group['model_year']}, "
-                f"Signalset: {test_group['signalset']}): {e}"
+                f"(Model Year: {test_group['model_year']}: {e}"
             )
 
 def get_json_files():
