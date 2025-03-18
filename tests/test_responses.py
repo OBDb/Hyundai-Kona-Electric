@@ -15,6 +15,56 @@ TEST_CASES = [
     {
         "model_year": 2023,
         "tests": [
+            # Tire pressure
+            ("""
+7A8101762C00BFFFF00
+7A82100B6490100B748
+7A8220100B6480100B7
+7A823480100AAAAAAAA
+""", {
+    "KONAEV_TP_FL": 36.4,
+    "KONAEV_TT_FL": 23,
+    "KONAEV_TP_FR": 36.6,
+    "KONAEV_TT_FR": 22,
+    "KONAEV_TP_RL": 36.4,
+    "KONAEV_TT_RL": 22,
+    "KONAEV_TP_RR": 36.6,
+    "KONAEV_TT_RR": 22,
+    }),
+            ("""
+7A8101762C00BFFFF00
+7A82100B7490100B749
+7A8220100B7490100B7
+7A823480100AAAAAAAA
+""", {
+    "KONAEV_TP_FL": 36.6,
+    "KONAEV_TT_FL": 23,
+    "KONAEV_TP_FR": 36.6,
+    "KONAEV_TT_FR": 23,
+    "KONAEV_TP_RL": 36.6,
+    "KONAEV_TT_RL": 23,
+    "KONAEV_TP_RR": 36.6,
+    "KONAEV_TT_RR": 22,
+    }),
+
+            # Speed
+            ("""
+7EA10186101FFF80000
+7EA2109285A7611D908
+7EA229853B4018C7734
+7EA2304080805000000
+""", {
+    "KONAEV_VSS": 44.7,
+    }),
+            ("""
+7EA10186101FFF80000
+7EA2109285AA90DE006
+7EA22DA33BE06997734
+7EA2304080805000000
+""", {
+    "KONAEV_VSS": 34.97,
+    }),
+
             # Battery state
             ("""
 7EC103E620101FFF7E7
