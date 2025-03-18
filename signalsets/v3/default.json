@@ -24,7 +24,7 @@
   "signals": [
     {"id": "KONAEV_VSS", "path": "Movement", "fmt": {"bix": 104, "len": 16, "blsb": true, "max": 180, "min": -180, "div": 100, "sign": true, "unit": "milesPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
   ]},
-{ "hdr": "7E2", "rax": "7EA", "cmd": {"22": "E004"}, "freq": 1,
+{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "E004"}, "freq": 1,
   "signals": [
     {"id": "KONAEV_VPWR", "path": "Battery", "fmt": {"bix": 152, "len": 8, "max": 100, "unit": "percent" }, "name": "12V battery charge"}
   ]},
@@ -167,11 +167,16 @@
   ]},
 { "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0105"}, "freq": 1,
   "signals": [
-    {"id": "KONAEV_HVBAT_SOH",         "path": "Battery",             "fmt": {"bix": 200, "len": 16, "max": 100,                       "div": 10,   "unit": "percent"       }, "name": "HV battery state of health",    "suggestedMetric": "stateOfHealth"},
-    {"id": "KONAEV_HVBAT_WH",          "path": "Battery",             "fmt": {"bix": 224, "len": 16, "max": 100,             "mul": 2, "div": 1000, "unit": "kilowattHours" }, "name": "HV battery remaining energy"},
-    {"id": "KONAEV_HVBAT_SOC_DISP",    "path": "Battery",             "fmt": {"bix": 248, "len": 8,  "max": 100,                       "div": 2,    "unit": "percent"       }, "name": "HV battery charge",             "suggestedMetric": "stateOfCharge"},
-    {"id": "KONAEV_HVBAT_CMU097_VOLT", "path": "Battery.Modules.097", "fmt": {"bix": 272, "len": 8,  "max": 4.2, "min": 2.8,           "div": 50,   "unit": "volts"         }, "name": "HV battery module 097 voltage"},
-    {"id": "KONAEV_HVBAT_CMU098_VOLT", "path": "Battery.Modules.098", "fmt": {"bix": 280, "len": 8,  "max": 4.2, "min": 2.8,           "div": 50,   "unit": "volts"         }, "name": "HV battery module 098 voltage"}
+    {"id": "KONAEV_HVBAT_C_DEV_V",     "path": "Battery",             "fmt": {"bix": 160, "len": 8,  "max": 5.1,              "div": 50,                               "unit": "volts"   }, "name": "HV cell deviation (voltage)"},
+    {"id": "KONAEV_HVBAT_HTR1_T",      "path": "Battery",             "fmt": {"bix": 184, "len": 8,  "max": 127, "min": -127,            "sign": true,                 "unit": "celsius" }, "name": "HV battery heater 1 temperature"},
+    {"id": "KONAEV_HVBAT_HTR2_T",      "path": "Battery",             "fmt": {"bix": 192, "len": 8,  "max": 127, "min": -127,            "sign": true,                 "unit": "celsius" }, "name": "HV battery heater 2 temperature"},
+    {"id": "KONAEV_HVBAT_SOH",         "path": "Battery",             "fmt": {"bix": 200, "len": 16, "max": 100,              "div": 10,                               "unit": "percent" }, "name": "HV battery state of health",         "suggestedMetric": "stateOfHealth"},
+    {"id": "KONAEV_HVBAT_DET_MAX_ID",  "path": "Battery",             "fmt": {"bix": 216, "len": 8,  "max": 98,                                        "nullmax": 200, "unit": "scalar"  }, "name": "HV battery max deteriation cell id"},
+    {"id": "KONAEV_HVBAT_DET_MIN",     "path": "Battery",             "fmt": {"bix": 224, "len": 16, "max": 100,              "div": 10,                               "unit": "percent" }, "name": "HV battery min deteriation"},
+    {"id": "KONAEV_HVBAT_DET_MIN_ID",  "path": "Battery",             "fmt": {"bix": 240, "len": 8,  "max": 98,                                        "nullmax": 200, "unit": "scalar"  }, "name": "HV battery min deteriation cell id"},
+    {"id": "KONAEV_HVBAT_SOC_DISP",    "path": "Battery",             "fmt": {"bix": 248, "len": 8,  "max": 100,              "div": 2,                                "unit": "percent" }, "name": "HV battery charge",                  "suggestedMetric": "stateOfCharge"},
+    {"id": "KONAEV_HVBAT_CMU097_VOLT", "path": "Battery.Modules.097", "fmt": {"bix": 272, "len": 8,  "max": 4.2, "min": 2.8,  "div": 50,                               "unit": "volts"   }, "name": "HV battery module 097 voltage"},
+    {"id": "KONAEV_HVBAT_CMU098_VOLT", "path": "Battery.Modules.098", "fmt": {"bix": 280, "len": 8,  "max": 4.2, "min": 2.8,  "div": 50,                               "unit": "volts"   }, "name": "HV battery module 098 voltage"}
   ]}
 ],
 "signalGroups": [
