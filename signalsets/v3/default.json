@@ -10,11 +10,6 @@
     {"id": "KONAEV_TP_RR", "path": "Tires", "fmt": {"bix": 128, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Rear right tire pressure",     "suggestedMetric": "rearRightTirePressure"},
     {"id": "KONAEV_TT_RR", "path": "Tires", "fmt": {"bix": 136, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Rear right tire temperature"}
   ]},
-{ "hdr": "7B3", "fcm1": true, "dbg": true, "cmd": {"22": "0101"}, "freq": 1,
-  "signals": [
-    {"id": "KONAEV_IAT_PASS",      "path": "Climate", "fmt": {"bix": 64, "len": 8, "max": 215, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Passenger temperature"},
-    {"id": "KONAEV_IAT_PASS_LEGS", "path": "Climate", "fmt": {"bix": 72, "len": 8, "max": 215, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Passenger leg temperature"}
-  ]},
 { "hdr": "7C6", "rax": "7CE", "fcm1": true, "cmd": {"22": "B002"}, "freq": 5,
   "signals": [
     {"id": "KONAEV_ODO_KM", "path": "Trips", "fmt": {"bix": 48, "len": 24, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer (Metric)",   "suggestedMetric": "odometer"},
@@ -23,10 +18,6 @@
 { "hdr": "7E2", "rax": "7EA", "cmd": {"21": "01"}, "freq": 0.25,
   "signals": [
     {"id": "KONAEV_VSS", "path": "Movement", "fmt": {"bix": 104, "len": 16, "blsb": true, "max": 180, "min": -180, "div": 100, "sign": true, "unit": "milesPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
-  ]},
-{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "E004"}, "freq": 1,
-  "signals": [
-    {"id": "KONAEV_VPWR", "path": "Battery", "fmt": {"bix": 152, "len": 8, "max": 100, "unit": "percent" }, "name": "12V battery charge"}
   ]},
 { "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0101"}, "freq": 1,
   "signals": [
