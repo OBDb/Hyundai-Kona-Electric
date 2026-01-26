@@ -1,3 +1,6 @@
+references:
+  - "https://en.wikipedia.org/wiki/Hyundai_Kona"
+
 generations:
   - name: "First Generation"
     start_year: 2018
