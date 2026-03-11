@@ -1,6 +1,13 @@
 command_id: 7C6.7CE.22B002|fc=1
 test_cases:
 - expected_values:
+    KONAEV_ODO_KM: 0
+    KONAEV_ODO_MI: 8569
+  response: |-
+    7CE101462B002DC0000
+    7CE2100FFB500000000
+    7CE2221790000B50000
+- expected_values:
     KONAEV_ODO_KM: 28984
     KONAEV_ODO_MI: 0
   response: |-
