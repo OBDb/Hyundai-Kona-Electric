@@ -1,4 +1,8 @@
 { "commands": [
+{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "dbg": true, "cmd": {"22": "B00C"}, "freq": 5,
+  "signals": [
+    {"id": "KONAEV_HEATED_WHEEL", "path": "Climate", "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "offon" }, "name": "Heated steering wheel"}
+  ]},
 { "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00B"}, "freq": 15, "dbgfilter": { "years": [2019], "from": 2025 },
   "signals": [
     {"id": "KONAEV_TP_FL", "path": "Tires", "fmt": {"bix": 32,  "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Front left tire pressure",     "suggestedMetric": "frontLeftTirePressure"},
