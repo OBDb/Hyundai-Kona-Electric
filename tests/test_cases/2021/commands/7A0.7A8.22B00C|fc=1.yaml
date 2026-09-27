@@ -1,0 +1,17 @@
+command_id: 7A0.7A8.22B00C|fc=1
+test_cases:
+- expected_values:
+    KONAEV_HEATED_WHEEL: 0
+  response: |-
+    7A8100B62B00C030000
+    7A8218000000000AAAA
+- expected_values:
+    KONAEV_HEATED_WHEEL: 0
+  response: |-
+    7A8100B62B00C030000
+    7A8218040000000AAAA
+- expected_values:
+    KONAEV_HEATED_WHEEL: 0
+  response: |-
+    7A8100B62B00C030000
+    7A8218080000000AAAA
