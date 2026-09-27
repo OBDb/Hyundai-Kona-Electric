@@ -1,8 +1,9 @@
 { "ecu": [
-    { "hdr": "7E2", "type": "vehicleControl" }
+    { "hdr": "7E2", "type": "vehicleControl" },
+    { "hdr": "7E4", "type": "battery" }
   ],
   "commands": [
-{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "dbg": true, "cmd": {"22": "B00C"}, "freq": 5,
+{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "B00C"}, "freq": 5, "dbgfilter": { "to": 2020, "from": 2022 },
   "signals": [
     {"id": "KONAEV_HEATED_WHEEL", "path": "Climate", "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "offon" }, "name": "Heated steering wheel"}
   ]},
