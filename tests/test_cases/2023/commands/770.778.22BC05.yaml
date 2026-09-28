@@ -1,0 +1,12 @@
+command_id: 770.778.22BC05
+test_cases:
+- expected_values:
+    KONAEV_HAZARD_SW: 0
+  response: |-
+    778100B62BC053F1320
+    778210000000000AAAA
+- expected_values:
+    KONAEV_HAZARD_SW: 80
+  response: |-
+    778100B62BC053F1320
+    778210050000000AAAA

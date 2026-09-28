@@ -1,0 +1,8 @@
+command_id: 770.778.22BC09
+test_cases:
+- expected_values:
+    KONAEV_HL_HIGH: 0
+    KONAEV_HL_LOW: 0
+  response: |-
+    778100B62BC09000000
+    778210000000000AAAA
