@@ -1,0 +1,22 @@
+command_id: 770.778.22BC06
+test_cases:
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 0
+  response: |-
+    778100B62BC06B48000
+    778210000000000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 0
+  response: |-
+    778100B62BC06B48000
+    778210000020000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 13
+  response: |-
+    778100B62BC06B48000
+    77821000D000000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 37
+  response: |-
+    778100B62BC06B48000
+    778210025000000AAAA
