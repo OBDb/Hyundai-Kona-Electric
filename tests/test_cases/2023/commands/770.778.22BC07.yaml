@@ -1,0 +1,12 @@
+command_id: 770.778.22BC07
+test_cases:
+- expected_values:
+    KONAEV_DEFOG_LIGHT: 0
+  response: |-
+    778100B62BC07004193
+    77821FC00000900AAAA
+- expected_values:
+    KONAEV_DEFOG_LIGHT: 0
+  response: |-
+    778100B62BC07004193
+    77821FC00000904AAAA

@@ -1,0 +1,14 @@
+command_id: 770.778.22BC08
+test_cases:
+- expected_values:
+    KONAEV_TURN_L: 0
+    KONAEV_TURN_R: 0
+  response: |-
+    778100B62BC08001000
+    778210000000000AAAA
+- expected_values:
+    KONAEV_TURN_L: 0
+    KONAEV_TURN_R: 0
+  response: |-
+    778100B62BC08001000
+    778210000080000AAAA
