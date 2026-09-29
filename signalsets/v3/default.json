@@ -1,6 +1,7 @@
 { "ecu": [
     { "hdr": "7E2", "type": "vehicleControl" },
-    { "hdr": "7E4", "type": "battery" }
+    { "hdr": "7E4", "type": "battery" },
+    { "hdr": "7E5", "type": "charger" }
   ],
   "commands": [
 { "hdr": "730", "rax": "738", "dbg": true, "cmd": {"22": "F010"}, "freq": 0.25,
