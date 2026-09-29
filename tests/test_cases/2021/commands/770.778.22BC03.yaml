@@ -1,0 +1,17 @@
+command_id: 770.778.22BC03
+test_cases:
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    778217300640000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    77821730A640000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    77821730A660000AAAA

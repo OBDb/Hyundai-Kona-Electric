@@ -1,0 +1,22 @@
+command_id: 770.778.22BC04
+test_cases:
+- expected_values:
+    KONAEV_BELT_RL: 1
+    KONAEV_BELT_RM: 1
+    KONAEV_BELT_RR: 1
+    KONAEV_GEAR_R: 0
+    KONAEV_LOCK_FL: 0
+    KONAEV_LOCK_FR: 0
+  response: |-
+    778100B62BC04B53F74
+    77821EA01002E42AAAA
+- expected_values:
+    KONAEV_BELT_RL: 1
+    KONAEV_BELT_RM: 1
+    KONAEV_BELT_RR: 1
+    KONAEV_GEAR_R: 0
+    KONAEV_LOCK_FL: 1
+    KONAEV_LOCK_FR: 1
+  response: |-
+    778100B62BC04B53F74
+    77821EA0D002E42AAAA
