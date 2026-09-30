@@ -6,7 +6,32 @@ test_cases:
     778100B62BC06B48000
     778210000000000AAAA
 - expected_values:
+    KONAEV_BRAKE_LIGHT: 0
+  response: |-
+    778100B62BC06B48000
+    778210000010000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 0
+  response: |-
+    778100B62BC06B48000
+    778210000020000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 44
+  response: |-
+    778100B62BC06B48000
+    77821002C000000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 44
+  response: |-
+    778100B62BC06B48000
+    77821002C010000AAAA
+- expected_values:
     KONAEV_BRAKE_LIGHT: 45
   response: |-
     778100B62BC06B48000
     77821002D000000AAAA
+- expected_values:
+    KONAEV_BRAKE_LIGHT: 45
+  response: |-
+    778100B62BC06B48000
+    77821002D010000AAAA
