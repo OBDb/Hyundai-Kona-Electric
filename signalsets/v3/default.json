@@ -30,7 +30,7 @@
     {"id": "KONAEV_AWD_CALC_ENG_POWER", "path": "Engine",   "fmt": {"bix": 72,  "len": 16, "max": 64,                    "mul": 9.766,  "div": 10000,                         "unit": "kilowattHours" },             "name": "4WD calculated engine power"},
     {"id": "KONAEV_AWD_RPM",            "path": "Movement", "fmt": {"bix": 112, "len": 16, "blsb": true, "max": 16383.5, "min": -16384,               "div": 2, "sign": true,                         "unit": "bars" },                                     "name": "4WD engine RPM"}
   ]},
-{ "hdr": "744", "rax": "74C", "fcm1": true, "dbg": true, "cmd": {"22": "E001"}, "freq": 1,
+{ "hdr": "744", "rax": "74C", "fcm1": true, "cmd": {"22": "E001"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_AUX_BATTERY_VOLTAGE",  "path": "Battery.Charging", "fmt": {"bix": 88,  "len": 16, "max": 655.35,                        "div": 100,             "unit": "volts" }, "name": "Auxiliary battery voltage"},
     {"id": "KONAEV_DC_CHRG_STATE",        "path": "Battery.Charging", "fmt": {"bix": 140, "len": 1,  "max": 1,                                                     "unit": "offon" }, "name": "DC charging state"},
@@ -43,7 +43,7 @@
     {"id": "KONAEV_OBC_DCHRG_AC_CURRENT", "path": "Battery.Charging", "fmt": {"bix": 216, "len": 8,  "max": 255,                                                   "unit": "amps"  }, "name": "On-board charger, discharging AC current"},
     {"id": "KONAEV_ESTIMATED_CHRG_POWER", "path": "Battery.Charging", "fmt": {"bix": 224, "len": 16, "max": 655300, "min": -50, "mul": 10,             "add": -50, "unit": "watts" }, "name": "Estimated charging power"}
   ]},
-{ "hdr": "744", "rax": "74C", "dbg": true, "cmd": {"22": "E002"}, "freq": 0.25,
+{ "hdr": "744", "rax": "74C", "cmd": {"22": "E002"}, "freq": 0.25, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_EVSE_MAXIMUM_VOLTAGE_VALUE",              "path": "Battery.Charging", "fmt": {"bix": 72,  "len": 16, "max": 6553.5,                        "div": 10,               "unit": "volts"         }, "name": "Electric vehicle supply equipment, voltage, max"},
     {"id": "KONAEV_EVSE_MAXIMUM_CURRENT_VALUE",              "path": "Battery.Charging", "fmt": {"bix": 88,  "len": 16, "max": 6553.5,                        "div": 10,               "unit": "amps"          }, "name": "Electric vehicle supply equipment, current, max"},
@@ -56,7 +56,7 @@
     {"id": "KONAEV_EVSE_MAXIMUM_POWER_VALUE",                "path": "Battery.Charging", "fmt": {"bix": 200, "len": 16, "max": 655350,             "mul": 10,                          "unit": "watts"         }, "name": "Electric vehicle supply equipment, power, max"},
     {"id": "KONAEV_EVSE_MAIN_POWER",                         "path": "Battery.Charging", "fmt": {"bix": 216, "len": 8,  "max": 255,                                                    "unit": "kilowatts"     }, "name": "Electric vehicle supply equipment, power, main"}
   ]},
-{ "hdr": "744", "rax": "74C", "fcm1": true, "dbg": true, "cmd": {"22": "E003"}, "freq": 1,
+{ "hdr": "744", "rax": "74C", "fcm1": true, "cmd": {"22": "E003"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HVBAT_CP_VOLTAGE",               "path": "Battery", "fmt": {"bix": 48,  "len": 8,  "max": 25.5,              "div": 10,    "unit": "volts"   }, "name": "Control pilot voltage"},
     {"id": "KONAEV_HVBAT_CP_DUTY_CYCLE",            "path": "Battery", "fmt": {"bix": 56,  "len": 16, "max": 100,               "div": 10,    "unit": "percent" }, "name": "Control pilot duty cycle"},
@@ -78,7 +78,7 @@
     {"id": "KONAEV_AC_CHARGING_TIME_AFTER_PLUG_IN", "path": "Battery", "fmt": {"bix": 336, "len": 16, "max": 65535,                           "unit": "minutes" }, "name": "A/C charging time, after plug-in"},
     {"id": "KONAEV_DC_CHARGING_TIME_AFTER_PLUG_IN", "path": "Battery", "fmt": {"bix": 352, "len": 16, "max": 65535,                           "unit": "minutes" }, "name": "DC charging time, after plug-in"}
   ]},
-{ "hdr": "744", "rax": "74C", "dbg": true, "cmd": {"22": "E004"}, "freq": 1,
+{ "hdr": "744", "rax": "74C", "cmd": {"22": "E004"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_BATTERY_MAIN_RELAY_STATUS", "path": "Battery.Charging", "fmt": {"bix": 37, "len": 1, "max": 1,                           "unit": "offon"   }, "name": "Battery main relay status"},
     {"id": "KONAEV_CHARGING_SOCKET_CONNECTED", "path": "Battery.Charging", "fmt": {"bix": 38, "len": 1, "max": 1,                           "unit": "offon"   }, "name": "Charging socket connected"},
@@ -92,7 +92,7 @@
   "signals": [
     {"id": "KONAEV_LOW_BEAMS", "path": "Lights", "fmt": {"bix": 48, "len": 8, "max": 255, "unit": "scalar" }, "name": "Low beams"}
   ]},
-{ "hdr": "770", "rax": "778", "cmd": {"22": "BC04"}, "freq": 1, "dbgfilter": { "to": 2020, "years": [2022], "from": 2024 },
+{ "hdr": "770", "rax": "778", "cmd": {"22": "BC04"}, "freq": 1, "dbgfilter": { "to": 2020, "years": [2022], "from": 2025 },
   "signals": [
     {"id": "KONAEV_GEAR_R",  "path": "Transmission", "fmt": {"bix": 35, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Reverse gear selected"},
     {"id": "KONAEV_LOCK_FL", "path": "Doors",        "fmt": {"bix": 36, "len": 1, "max": 1, "unit": "scalar" }, "name": "Front left door locked?"},
@@ -101,12 +101,12 @@
     {"id": "KONAEV_BELT_RL", "path": "Seatbelts",    "fmt": {"bix": 53, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Rear left seatbelt latched?"},
     {"id": "KONAEV_BELT_RR", "path": "Seatbelts",    "fmt": {"bix": 54, "len": 1, "max": 1, "unit": "noyes"  }, "name": "Rear right seatbelt latched?"}
   ]},
-{ "hdr": "770", "rax": "778", "cmd": {"22": "BC05"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "770", "rax": "778", "cmd": {"22": "BC05"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HAZARD_SW", "path": "Lights", "fmt": {"bix": 32, "len": 8, "max": 255,                             "unit": "scalar" }, "name": "Hazard switch"},
     {"id": "KONAEV_HL_SW",     "path": "Lights", "fmt": {"bix": 48, "len": 8, "max": 1,   "nullmin": 0, "nullmax": 2, "unit": "noyes"  }, "name": "Headlight switch"}
   ]},
-{ "hdr": "770", "rax": "778", "cmd": {"22": "BC06"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2023 },
+{ "hdr": "770", "rax": "778", "cmd": {"22": "BC06"}, "freq": 1, "dbgfilter": { "to": 2020, "years": [2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_BRAKE_LIGHT", "path": "Lights", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake light"}
   ]},
@@ -114,12 +114,12 @@
   "signals": [
     {"id": "KONAEV_DEFOG_LIGHT", "path": "Lights", "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "offon" }, "name": "Defog light"}
   ]},
-{ "hdr": "770", "rax": "778", "cmd": {"22": "BC08"}, "freq": 2, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "770", "rax": "778", "cmd": {"22": "BC08"}, "freq": 2, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "KONAEV_TURN_R", "path": "Lights", "fmt": {"bix": 37, "len": 1, "max": 1, "unit": "offon" }, "name": "Right turn signal on?"},
     {"id": "KONAEV_TURN_L", "path": "Lights", "fmt": {"bix": 38, "len": 1, "max": 1, "unit": "offon" }, "name": "Left turn signal on?"}
   ]},
-{ "hdr": "770", "rax": "778", "cmd": {"22": "BC09"}, "freq": 1, "dbgfilter": { "to": 2021, "from": 2024 },
+{ "hdr": "770", "rax": "778", "cmd": {"22": "BC09"}, "freq": 1, "dbgfilter": { "to": 2021, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HL_HIGH", "path": "Lights", "fmt": {"bix": 55, "len": 1, "max": 1, "unit": "offon" }, "name": "Headlight high beam"},
     {"id": "KONAEV_HL_LOW",  "path": "Lights", "fmt": {"bix": 63, "len": 1, "max": 1, "unit": "offon" }, "name": "Headlight low beam"}
@@ -139,42 +139,42 @@
     {"id": "KONAEV_TP_RR", "path": "Tires", "fmt": {"bix": 128, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Rear right tire pressure",     "suggestedMetric": "rearRightTirePressure"},
     {"id": "KONAEV_TT_RR", "path": "Tires", "fmt": {"bix": 136, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Rear right tire temperature"}
   ]},
-{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00C"}, "freq": 30, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00C"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_SENS_1_ODO_EVT_1", "path": "Trips", "fmt": {"bix": 272, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 1 odometer event 1"},
     {"id": "KONAEV_SENS_1_ODO_EVT_2", "path": "Trips", "fmt": {"bix": 296, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 1 odometer event 2"},
     {"id": "KONAEV_SENS_1_ODO_EVT_3", "path": "Trips", "fmt": {"bix": 320, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 1 odometer event 3"}
   ]},
-{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00D"}, "freq": 30, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00D"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_SENS_2_ODO_EVT_1", "path": "Trips", "fmt": {"bix": 272, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 2 odometer event 1"},
     {"id": "KONAEV_SENS_2_ODO_EVT_2", "path": "Trips", "fmt": {"bix": 296, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 2 odometer event 2"},
     {"id": "KONAEV_SENS_2_ODO_EVT_3", "path": "Trips", "fmt": {"bix": 320, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 2 odometer event 3"}
   ]},
-{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00E"}, "freq": 30, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00E"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_SENS_3_ODO_EVT_1", "path": "Trips", "fmt": {"bix": 272, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 3 odometer event 1"},
     {"id": "KONAEV_SENS_3_ODO_EVT_2", "path": "Trips", "fmt": {"bix": 296, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 3 odometer event 2"},
     {"id": "KONAEV_SENS_3_ODO_EVT_3", "path": "Trips", "fmt": {"bix": 320, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 3 odometer event 3"}
   ]},
-{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00F"}, "freq": 30, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "7A0", "rax": "7A8", "fcm1": true, "cmd": {"22": "C00F"}, "freq": 30, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_SENS_4_ODO_EVT_1", "path": "Trips", "fmt": {"bix": 272, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 4 odometer event 1"},
     {"id": "KONAEV_SENS_4_ODO_EVT_2", "path": "Trips", "fmt": {"bix": 296, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 4 odometer event 2"},
     {"id": "KONAEV_SENS_4_ODO_EVT_3", "path": "Trips", "fmt": {"bix": 320, "len": 24, "max": 1677721.5, "div": 10, "unit": "kilometers" }, "name": "Sensor 4 odometer event 3"}
   ]},
-{ "hdr": "7B3", "rax": "7BB", "fcm1": true, "cmd": {"22": "0100"}, "freq": 0.25, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "7B3", "rax": "7BB", "fcm1": true, "cmd": {"22": "0100"}, "freq": 0.25, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "KONAEV_TEMP_INT", "path": "Climate",  "fmt": {"bix": 40,  "len": 8, "max": 80,  "min": -40, "div": 2, "add": -40, "unit": "celsius"           }, "name": "Interior temperature"},
     {"id": "KONAEV_TEMP_EXT", "path": "Climate",  "fmt": {"bix": 48,  "len": 8, "max": 80,  "min": -40, "div": 2, "add": -40, "unit": "celsius"           }, "name": "Exterior temperature"},
     {"id": "KONAEV_VSS_7B3",  "path": "Movement", "fmt": {"bix": 232, "len": 8, "max": 255,                                   "unit": "kilometersPerHour" }, "name": "Vehicle speed",        "suggestedMetric": "speed"}
   ]},
-{ "hdr": "7B3", "rax": "7BB", "dbg": true, "cmd": {"22": "0101"}, "freq": 1,
+{ "hdr": "7B3", "rax": "7BB", "cmd": {"22": "0101"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HVAC_IAT_PASSENGER_VENT",      "path": "Climate", "fmt": {"bix": 64, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Interior temperature, passenger vent"},
     {"id": "KONAEV_HVAC_IAT_PASSENGER_LEGS_VENT", "path": "Climate", "fmt": {"bix": 72, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Interior temperature, passenger legs vent"}
   ]},
-{ "hdr": "7B3", "rax": "7BB", "cmd": {"22": "0102"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "7B3", "rax": "7BB", "cmd": {"22": "0102"}, "freq": 1, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_HVAC_COOLANT_T",  "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Coolant temperature"},
     {"id": "KONAEV_HVAC_INVERTER_T", "path": "Engine", "fmt": {"bix": 96, "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Inverter temperature"}
@@ -191,7 +191,7 @@
     {"id": "KONAEV_RL_VSS", "path": "Movement", "fmt": {"bix": 104, "len": 8, "max": 127, "min": -127.5, "sign": true, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"},
     {"id": "KONAEV_RR_VSS", "path": "Movement", "fmt": {"bix": 112, "len": 8, "max": 127, "min": -127.5, "sign": true, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
   ]},
-{ "hdr": "7D1", "rax": "7D9", "cmd": {"22": "0104"}, "freq": 0.25, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "7D1", "rax": "7D9", "cmd": {"22": "0104"}, "freq": 0.25, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "KONAEV_WHEEL_FL_VSS", "path": "Movement", "fmt": {"bix": 80,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"},
     {"id": "KONAEV_WHEEL_FR_VSS", "path": "Movement", "fmt": {"bix": 88,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"},
@@ -216,7 +216,7 @@
   "signals": [
     {"id": "KONAEV_STEER_ANGLE", "path": "Control", "fmt": {"bix": 72, "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle"}
   ]},
-{ "hdr": "7D4", "rax": "7DC", "cmd": {"22": "0101"}, "freq": 0.25, "dbgfilter": { "to": 2020, "years": [2022], "from": 2024 },
+{ "hdr": "7D4", "rax": "7DC", "cmd": {"22": "0101"}, "freq": 0.25, "dbgfilter": { "to": 2020, "years": [2022], "from": 2025 },
   "signals": [
     {"id": "KONAEV_WHEEL_ANGLE_ABS",    "path": "Tires",  "fmt": {"bix": 56, "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Wheel turn angle, absolute"},
     {"id": "KONAEV_MDPS_MOTOR_CURRENT", "path": "Engine", "fmt": {"bix": 88, "len": 8,  "max": 127,    "min": -128,               "sign": true, "unit": "amps"    }, "name": "Motor-driven power steering current"}
@@ -695,13 +695,13 @@
     {"id": "KONAEV_AUXILIARY_BAT",        "path": "Battery", "fmt": {"bix": 168, "len": 16, "blsb": true, "max": 32.767, "min": -32.768,             "div": 1000, "sign": true,                   "unit": "amps"  },                                           "name": "Auxiliary battery current"},
     {"id": "KONAEV_AUXILIARY_BAT_ST_CHG", "path": "Battery", "fmt": {"bix": 184, "len": 8,  "max": 255,                                                                         "unit": "percent" },              "name": "Auxiliary battery state of charge"}
   ]},
-{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "E004"}, "freq": 1,
+{ "hdr": "7E2", "rax": "7EA", "cmd": {"22": "E004"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_ACCELERATOR_PEDAL_POSITION", "path": "Control",  "fmt": {"bix": 64, "len": 16, "blsb": true, "max": 100,                             "div": 512,                 "unit": "percent"           }, "name": "Accelerator pedal position"},
     {"id": "KONAEV_VSS_HD",                     "path": "Movement", "fmt": {"bix": 80, "len": 16, "blsb": true, "max": 511, "min": -512, "mul": 156.25, "div": 10000, "sign": true, "unit": "kilometersPerHour" }, "name": "Vehicle speed, high resolution", "suggestedMetric": "speed"},
     {"id": "KONAEV_12V_V",                      "path": "Battery",  "fmt": {"bix": 96, "len": 16, "blsb": true, "max": 32,               "mul": 4.883,  "div": 10000,               "unit": "volts"             }, "name": "Auxiliary battery voltage",      "suggestedMetric": "starterBatteryVoltage"}
   ]},
-{ "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"22": "E005"}, "freq": 1,
+{ "hdr": "7E2", "rax": "7EA", "cmd": {"22": "E005"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_DISCONNECTOR_STROKE_POSITION",        "path": "Engine", "fmt": {"bix": 32,  "len": 16, "blsb": true, "max": 511,                                 "div": 128,                                                      "unit": "millimeters" },                                             "name": "Disconnector stroke position"},
     {"id": "KONAEV_DISCONNECTOR_MEET_POINT",             "path": "Engine", "fmt": {"bix": 48,  "len": 16, "blsb": true, "max": 511,                                 "div": 128,                                                      "unit": "millimeters" },                                             "name": "Disconnector meet point"},
@@ -716,7 +716,7 @@
     {"id": "KONAEV_MOTOR_T_7E3",    "path": "Engine", "fmt": {"bix": 88, "len": 8, "max": 127, "min": -128, "sign": true, "unit": "celsius" }, "name": "Motor temperature"},
     {"id": "KONAEV_INVERTER_T_7E3", "path": "Engine", "fmt": {"bix": 96, "len": 8, "max": 127, "min": -128, "sign": true, "unit": "celsius" }, "name": "Inverter temperature"}
   ]},
-{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "E001"}, "freq": 1,
+{ "hdr": "7E3", "rax": "7EB", "cmd": {"22": "E001"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_IGN_VOLTAGE",             "path": "Engine", "fmt": {"bix": 120, "len": 16, "blsb": true, "max": 65.535,                 "mul": 10, "div": 10000,               "unit": "volts"        }, "name": "Ignition voltage"},
     {"id": "KONAEV_MOTOR_RPM",               "path": "Engine", "fmt": {"bix": 136, "len": 16, "blsb": true, "max": 32767,  "min": -32768,                           "sign": true, "unit": "rpm"          }, "name": "Motor RPM"},
@@ -727,7 +727,7 @@
     {"id": "KONAEV_INVERTER_T",              "path": "Engine", "fmt": {"bix": 216, "len": 16, "blsb": true, "max": 327.67, "min": -327.68,            "div": 100,   "sign": true, "unit": "celsius"      }, "name": "Inverter temperature"},
     {"id": "KONAEV_HEAT_SINK_T",             "path": "Engine", "fmt": {"bix": 448, "len": 16, "blsb": true, "max": 327.67, "min": -327.68,            "div": 100,   "sign": true, "unit": "celsius"      }, "name": "Heat sink temperature"}
   ]},
-{ "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"22": "E009"}, "freq": 1,
+{ "hdr": "7E3", "rax": "7EB", "cmd": {"22": "E009"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_EWP_CURRENT_DC",               "path": "Battery", "fmt": {"bix": 56,  "len": 8, "max": 25.5,            "div": 10, "unit": "amps"  }, "name": "Electric water pump, current DC"},
     {"id": "KONAEV_EWP_VOLTAGE_DC",               "path": "Battery", "fmt": {"bix": 64,  "len": 8, "max": 25.5,            "div": 10, "unit": "volts" }, "name": "Electric water pump, voltage DC"},
@@ -893,7 +893,7 @@
     {"id": "KONAEV_HVBAT_CMU097_VOLT", "path": "Battery.Modules.097", "fmt": {"bix": 272, "len": 8,  "max": 4.2, "min": 2.8,  "div": 50,                               "unit": "volts"   }, "name": "HV battery module 097 voltage"},
     {"id": "KONAEV_HVBAT_CMU098_VOLT", "path": "Battery.Modules.098", "fmt": {"bix": 280, "len": 8,  "max": 4.2, "min": 2.8,  "div": 50,                               "unit": "volts"   }, "name": "HV battery module 098 voltage"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0106"}, "freq": 5, "dbgfilter": { "to": 2020, "from": 2022 },
+{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "0106"}, "freq": 5, "dbgfilter": { "to": 2020, "years": [2022, 2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_BMS_STATE",         "path": "Battery", "fmt": {            "len": 8, "max": 15,                                         "unit": "scalar"  }, "name": "Battery management state"},
     {"id": "KONAEV_HVBAT_WCS_INLET_T", "path": "Battery", "fmt": {"bix": 32,  "len": 8, "max": 127,  "min": -128,            "sign": true, "unit": "celsius" }, "name": "Battery temperature at WCS input"},
@@ -901,7 +901,7 @@
     {"id": "KONAEV_AC_COMP_RPM",       "path": "Climate", "fmt": {"bix": 96,  "len": 8, "max": 5100,              "mul": 20,               "unit": "rpm"     }, "name": "Air conditioning compressor speed"},
     {"id": "KONAEV_HVBAT_PRA_T",       "path": "Battery", "fmt": {"bix": 160, "len": 8, "max": 254,  "min": -256, "mul": 2,  "sign": true, "unit": "celsius" }, "name": "Battery temperature at the power relay assembly"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "dbg": true, "cmd": {"22": "010A"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "010A"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HVBAT_CMU097_VOLT_7E4", "path": "Battery.Modules.097", "fmt": {"bix": 32,  "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 097 voltage"},
     {"id": "KONAEV_HVBAT_CMU098_VOLT_7E4", "path": "Battery.Modules.098", "fmt": {"bix": 40,  "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 098 voltage"},
@@ -936,7 +936,7 @@
     {"id": "KONAEV_HVBAT_CMU127_VOLT",     "path": "Battery.Modules.127", "fmt": {"bix": 272, "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 127 voltage"},
     {"id": "KONAEV_HVBAT_CMU128_VOLT",     "path": "Battery.Modules.128", "fmt": {"bix": 280, "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 128 voltage"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "dbg": true, "cmd": {"22": "010B"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "010B"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HVBAT_CMU129_VOLT", "path": "Battery.Modules.129", "fmt": {"bix": 32,  "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 129 voltage"},
     {"id": "KONAEV_HVBAT_CMU130_VOLT", "path": "Battery.Modules.130", "fmt": {"bix": 40,  "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 130 voltage"},
@@ -971,7 +971,7 @@
     {"id": "KONAEV_HVBAT_CMU159_VOLT", "path": "Battery.Modules.159", "fmt": {"bix": 272, "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 159 voltage"},
     {"id": "KONAEV_HVBAT_CMU160_VOLT", "path": "Battery.Modules.160", "fmt": {"bix": 280, "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 160 voltage"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "dbg": true, "cmd": {"22": "010C"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "fcm1": true, "cmd": {"22": "010C"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_HVBAT_CMU161_VOLT", "path": "Battery.Modules.161", "fmt": {"bix": 32,  "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 161 voltage"},
     {"id": "KONAEV_HVBAT_CMU162_VOLT", "path": "Battery.Modules.162", "fmt": {"bix": 40,  "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 162 voltage"},
@@ -1006,7 +1006,7 @@
     {"id": "KONAEV_HVBAT_CMU191_VOLT", "path": "Battery.Modules.191", "fmt": {"bix": 272, "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 191 voltage"},
     {"id": "KONAEV_HVBAT_CMU192_VOLT", "path": "Battery.Modules.192", "fmt": {"bix": 280, "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "HV battery module 192 voltage"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "cmd": {"22": "0111"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2023 },
+{ "hdr": "7E4", "rax": "7EC", "cmd": {"22": "0111"}, "freq": 1, "dbgfilter": { "to": 2020, "years": [2023], "from": 2025 },
   "signals": [
     {"id": "KONAEV_NORMAL_CHARGING_COUNT",      "path": "Battery", "fmt": {"bix": 32,  "len": 32, "max": 4294967295,                           "unit": "scalar"        }, "name": "Normal charging, count"},
     {"id": "KONAEV_QUICK_CHARGING_COUNT",       "path": "Battery", "fmt": {"bix": 64,  "len": 32, "max": 4294967295,                           "unit": "scalar"        }, "name": "Quick charging, count"},
@@ -1015,7 +1015,7 @@
     {"id": "KONAEV_BATTERY_PACK_B17",           "path": "Battery", "fmt": {"bix": 208, "len": 8,  "max": 80,         "min": -40, "sign": true, "unit": "celsius"       }, "name": "Battery pack B17"},
     {"id": "KONAEV_BATTERY_PACK_B18",           "path": "Battery", "fmt": {"bix": 216, "len": 8,  "max": 80,         "min": -40, "sign": true, "unit": "celsius"       }, "name": "Battery pack B18"}
   ]},
-{ "hdr": "7E4", "rax": "7EC", "dbg": true, "cmd": {"22": "0114"}, "freq": 1,
+{ "hdr": "7E4", "rax": "7EC", "cmd": {"22": "0114"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_AC_COMPRESSOR_OPERATION_RPM", "path": "Climate", "fmt": {"bix": 208, "len": 16, "max": 1310700, "mul": 20, "unit": "rpm" }, "name": "A/C compressor operation RPM"}
   ]},
@@ -1046,7 +1046,7 @@
     {"id": "KONAEV_CHARGER_AC_INPUT_V_INSTANT", "path": "Battery", "fmt": {"bix": 304, "len": 8, "max": 552, "min": -100, "mul": 64, "div": 25, "add": -100, "unit": "volts"   }, "name": "Charger AC input voltage, instant"},
     {"id": "KONAEV_CHARGER_T_B",                "path": "Battery", "fmt": {"bix": 336, "len": 8, "max": 155, "min": -100,                       "add": -100, "unit": "celsius" }, "name": "Charger temperature b"}
   ]},
-{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "E001"}, "freq": 1,
+{ "hdr": "7E5", "rax": "7ED", "cmd": {"22": "E001"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_CHARGE_MODE_DC_TARGET_VOLTAGE",           "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 6553.5, "div": 10, "unit": "volts" }, "name": "Charge mode DC target voltage"},
     {"id": "KONAEV_CHARGE_MODE_DC_MAXIMUM_CURRENT_LIMIT",    "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 6553.5, "div": 10, "unit": "amps"  }, "name": "Charge mode DC maximum current limit"},
@@ -1055,7 +1055,7 @@
     {"id": "KONAEV_DISCHARGE_MODE_DC_MAXIMUM_CURRENT_LIMIT", "path": "Battery", "fmt": {"bix": 128, "len": 8,  "max": 255,               "unit": "amps"  }, "name": "Discharge mode DC maximum current limit"},
     {"id": "KONAEV_DISCHARGE_MODE_AC_MAXIMUM_CURRENT_LIMIT", "path": "Battery", "fmt": {"bix": 136, "len": 8,  "max": 255,               "unit": "amps"  }, "name": "Discharge mode A/C maximum current limit"}
   ]},
-{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "E002"}, "freq": 1,
+{ "hdr": "7E5", "rax": "7ED", "cmd": {"22": "E002"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_OBC_AC_VOLTAGE_A_RMS",                         "path": "Battery.Charging", "fmt": {"bix": 32,  "len": 16, "max": 6553.5,                 "div": 10,                            "unit": "volts"   }, "name": "On-board charger, AC voltage a"},
     {"id": "KONAEV_OBC_AC_VOLTAGE_B_RMS",                         "path": "Battery.Charging", "fmt": {"bix": 48,  "len": 16, "max": 6553.5,                 "div": 10,                            "unit": "volts"   }, "name": "On-board charger, AC voltage b"},
@@ -1072,12 +1072,12 @@
     {"id": "KONAEV_OBC_AC_INPUT_CURRENT_SENSOR_A_SIGNAL_VOLTAGE", "path": "Battery.Charging", "fmt": {"bix": 296, "len": 16, "max": 655.35,                 "div": 100,                           "unit": "volts"   }, "name": "On-board charger, AC input current sensor a signal voltage"},
     {"id": "KONAEV_OBC_AC_INPUT_CURRENT_SENSOR_B_SIGNAL_VOLTAGE", "path": "Battery.Charging", "fmt": {"bix": 312, "len": 16, "max": 655.35,                 "div": 100,                           "unit": "volts"   }, "name": "On-board charger, AC input current sensor b signal voltage"}
   ]},
-{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "E003"}, "freq": 1,
+{ "hdr": "7E5", "rax": "7ED", "cmd": {"22": "E003"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_OBC_CHARGE_MODE_DC_TARGET_VOLTAGE", "path": "Battery.Charging", "fmt": {"bix": 64, "len": 16, "max": 6553.5, "div": 10, "unit": "volts" }, "name": "On-board charger, charge mode DC target voltage"},
     {"id": "KONAEV_OBC_CHARGE_MODE_DC_TARGET_CURRENT", "path": "Battery.Charging", "fmt": {"bix": 80, "len": 16, "max": 6553.5, "div": 10, "unit": "amps"  }, "name": "On-board charger, charge mode DC target current"}
   ]},
-{ "hdr": "7E5", "rax": "7ED", "dbg": true, "cmd": {"22": "E011"}, "freq": 1,
+{ "hdr": "7E5", "rax": "7ED", "cmd": {"22": "E011"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
   "signals": [
     {"id": "KONAEV_LDC_T",                       "path": "Battery", "fmt": {"bix": 72,  "len": 8,  "max": 155,     "min": -100,                         "add": -100, "unit": "celsius" }, "name": "Low-voltage dc-dc converter, temperature"},
     {"id": "KONAEV_LDC_OUTPUT_VOLTAGE",          "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65.535,                          "div": 1000,              "unit": "volts"   }, "name": "Low-voltage dc-dc converter, output voltage"},
