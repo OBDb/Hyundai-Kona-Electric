@@ -4,4 +4,9 @@ test_cases:
     KONAEV_DEFOG_LIGHT: 0
   response: |-
     778100B62BC07000793
+    778210000000100AAAA
+- expected_values:
+    KONAEV_DEFOG_LIGHT: 0
+  response: |-
+    778100B62BC07000793
     778210000000900AAAA

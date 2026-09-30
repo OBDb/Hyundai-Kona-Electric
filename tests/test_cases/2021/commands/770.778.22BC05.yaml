@@ -5,3 +5,13 @@ test_cases:
   response: |-
     778100B62BC057F1300
     778210100000080AAAA
+- expected_values:
+    KONAEV_HAZARD_SW: 80
+  response: |-
+    778100B62BC057F1300
+    778210150000080AAAA
+- expected_values:
+    KONAEV_HAZARD_SW: 160
+  response: |-
+    778100B62BC057F1300
+    7782101A0000080AAAA
