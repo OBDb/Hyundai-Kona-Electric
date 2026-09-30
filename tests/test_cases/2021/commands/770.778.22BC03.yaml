@@ -4,7 +4,22 @@ test_cases:
     KONAEV_LOW_BEAMS: 0
   response: |-
     778100B62BC03FDEE3C
+    778217300040000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
     778217300640000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    778217300660000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    77821730A040000AAAA
 - expected_values:
     KONAEV_LOW_BEAMS: 0
   response: |-
@@ -15,3 +30,13 @@ test_cases:
   response: |-
     778100B62BC03FDEE3C
     77821730A660000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    778217320040000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
+    778217320640000AAAA
