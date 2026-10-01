@@ -57,6 +57,13 @@ test_cases:
     7CE2100FFAC00713800
     7CE2200004E0CAE0000
 - expected_values:
+    KONAEV_ODO_KM: 56066
+    KONAEV_ODO_MI: 0
+  response: |-
+    7CE101462B002EC0000
+    7CE2100FFB300DB0200
+    7CE2200000000B30000
+- expected_values:
     KONAEV_ODO_KM: 55999
     KONAEV_ODO_MI: 0
   response: |-
