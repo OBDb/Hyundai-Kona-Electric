@@ -15,13 +15,6 @@ test_cases:
     7CE21000094012A6F00
     7CE220000AAAAAAAAAA
 - expected_values:
-    KONAEV_ODO_KM: 76516
-    KONAEV_ODO_MI: 0
-  response: |-
-    7CE100F62B002600000
-    7CE21000098012AE400
-    7CE220000AAAAAAAAAA
-- expected_values:
     KONAEV_ODO_KM: 76517
     KONAEV_ODO_MI: 0
   response: |-
@@ -34,6 +27,13 @@ test_cases:
   response: |-
     7CE100F62B002600000
     7CE210000AA01281000
+    7CE220000AAAAAAAAAA
+- expected_values:
+    KONAEV_ODO_KM: 76531
+    KONAEV_ODO_MI: 0
+  response: |-
+    7CE100F62B002600000
+    7CE210000AA012AF300
     7CE220000AAAAAAAAAA
 - expected_values:
     KONAEV_ODO_KM: 76072
