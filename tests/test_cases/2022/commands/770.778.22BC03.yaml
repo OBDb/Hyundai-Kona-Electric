@@ -4,6 +4,11 @@ test_cases:
     KONAEV_LOW_BEAMS: 0
   response: |-
     778100B62BC03FDEE3C
+    778217300620000AAAA
+- expected_values:
+    KONAEV_LOW_BEAMS: 0
+  response: |-
+    778100B62BC03FDEE3C
     778217300660000AAAA
 - expected_values:
     KONAEV_LOW_BEAMS: 0
