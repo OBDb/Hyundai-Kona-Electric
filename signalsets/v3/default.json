@@ -568,7 +568,7 @@
     {"id": "KONAEV_REAR_LEFT_WHEEL_SPEED",   "path": "Movement", "fmt": {"bix": 128, "len": 8,  "max": 255,                                                      "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"},
     {"id": "KONAEV_LOCK_SWITCH",             "path": "Engine",   "fmt": {"bix": 151, "len": 1,  "max": 1,                                                        "unit": "offon"             }, "name": "Lock switch"},
     {"id": "KONAEV_STEERING_WHEEL_ANGLE",    "path": "Tires",    "fmt": {"bix": 160, "len": 8,  "max": 167,      "min": -88,                         "add": -88, "unit": "degrees"           }, "name": "Steering wheel angle"},
-    {"id": "KONAEV_MALFUNCTION_INDICATOR",   "path": "Engine",   "fmt": {"bix": 175, "len": 1,  "max": 1,                                                        "unit": "offon"             }, "name": "Malfunction indicator"},
+    {"id": "KONAEV_MALFUNCTION_INDICATOR",   "path": "Engine",   "fmt": {"bix": 175, "len": 1,  "max": 1,                                                        "unit": "offon"             }, "name": "Malfunction indicator",               "suggestedMetric": "checkEngineLightOn"},
     {"id": "KONAEV_PRESSURE_SENSOR",         "path": "Engine",   "fmt": {"bix": 176, "len": 8,  "max": 63.75,                            "div": 4,               "unit": "bars"              }, "name": "Pressure sensor"}
   ]},
 { "hdr": "7E5", "rax": "7ED", "cmd": {"21": "01"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2023 },
