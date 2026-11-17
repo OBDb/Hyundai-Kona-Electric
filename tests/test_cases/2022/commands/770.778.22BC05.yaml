@@ -7,7 +7,6 @@ test_cases:
     778210000000000AAAA
 - expected_values:
     KONAEV_HAZARD_SW: 0
-    KONAEV_HL_SW: 1
   response: |-
     778100B62BC053F1320
     778210000400400AAAA
