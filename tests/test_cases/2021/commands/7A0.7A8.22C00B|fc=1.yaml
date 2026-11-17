@@ -1,10 +1,6 @@
 command_id: 7A0.7A8.22C00B|fc=1
 test_cases:
 - expected_values:
-    KONAEV_TP_FL: 0
-    KONAEV_TP_FR: 0
-    KONAEV_TP_RL: 0
-    KONAEV_TP_RR: 0
     KONAEV_TT_FL: -50
     KONAEV_TT_FR: -50
     KONAEV_TT_RL: -50
@@ -15,7 +11,6 @@ test_cases:
     7A82200020000000200
     7A823000002AAAAAAAA
 - expected_values:
-    KONAEV_TP_FL: 0
     KONAEV_TP_FR: 33
     KONAEV_TP_RL: 32.8
     KONAEV_TP_RR: 32.4
@@ -128,9 +123,6 @@ test_cases:
     7A8233D0100AAAAAAAA
 - expected_values:
     KONAEV_TP_FL: 32.8
-    KONAEV_TP_FR: 0
-    KONAEV_TP_RL: 0
-    KONAEV_TP_RR: 0
     KONAEV_TT_FL: 20
     KONAEV_TT_FR: -50
     KONAEV_TT_RL: -50
