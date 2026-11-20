@@ -37,6 +37,13 @@ test_cases:
     7CE2283FF007E07DCFE
 - expected_values:
     KONAEV_ODO_KM: 0
+    KONAEV_ODO_MI: 39680
+  response: |-
+    7CE100F62B002D00000
+    7CE21001AAC00000000
+    7CE229B00007E07DCFE
+- expected_values:
+    KONAEV_ODO_KM: 0
     KONAEV_ODO_MI: 33626
   response: |-
     7CE100F62B002D00000
